@@ -243,6 +243,59 @@
     margin-top: 14px;
   }
 
+  .instructions{
+    width: 100%;
+    max-width: 640px;
+    margin-top: 28px;
+    background: var(--bg-panel);
+    border: 1px solid var(--border-soft);
+    border-radius: 14px;
+    padding: 22px 22px 26px;
+  }
+  .instructions h2{
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--amber);
+    margin: 0 0 18px;
+    text-align: center;
+  }
+  .instructions-cols{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  .instructions-col h3{
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    color: var(--teal);
+    margin: 0 0 10px;
+    letter-spacing: 0.03em;
+  }
+  .instructions-col ol{
+    margin: 0;
+    padding-left: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .instructions-col li{
+    font-size: 13px;
+    color: var(--ink-dim);
+    line-height: 1.5;
+  }
+  .instructions-col li::marker{
+    color: var(--teal);
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  @media (max-width: 640px){
+    .instructions-cols{
+      grid-template-columns: 1fr;
+    }
+  }
+
   @media (max-width: 640px){
     .periodic-table{
       grid-template-columns: repeat(18, 34px);
@@ -291,6 +344,36 @@
   </div>
 
   <div class="hint">Select an element to see which ones it reacts with — the rest dim out.</div>
+
+  <section class="instructions">
+    <h2>භාවිතයට උපදෙස් · Instructions for Use</h2>
+    <div class="instructions-cols">
+      <div class="instructions-col">
+        <h3>සිංහල</h3>
+        <ol>
+          <li>මූලද්‍රව්‍යයක් මත click/tap කරන්න — එය තෝරාගැනේ.</li>
+          <li>එයට සංයෝග විය හැකි මූලද්‍රව්‍ය teal පාටින් highlight වී පෙන්වයි; අනෙක් සියල්ල බොඳ වී පෙනේ.</li>
+          <li>ඉන්පසු "drop A" හෝ "drop B" කොටුව මත click/tap කර මූලද්‍රව්‍යය එහි තබන්න.</li>
+          <li>එලෙසම දෙවන මූලද්‍රව්‍යයක් තෝරා අනෙක් කොටුවට තබන්න.</li>
+          <li>Desktop පරිගණකයක නම් mouse එකෙන් drag කර කොටුවලට drop කළ හැක.</li>
+          <li>කොටු දෙකම පිරුණු විට, සෑදෙන සංයෝගය සහ එහි විස්තරය "=" ලකුණට පසුව පෙන්වයි.</li>
+          <li>නැවත ආරම්භ කිරීමට "Reset" බොත්තම click කරන්න.</li>
+        </ol>
+      </div>
+      <div class="instructions-col">
+        <h3>English</h3>
+        <ol>
+          <li>Click or tap an element to select it.</li>
+          <li>Elements it can react with are highlighted in teal; every other element dims out.</li>
+          <li>Tap either the "drop A" or "drop B" slot to place the selected element there.</li>
+          <li>Select a second element the same way and place it in the other slot.</li>
+          <li>On desktop, you can also drag an element directly onto a slot.</li>
+          <li>Once both slots are filled, the resulting compound and its explanation appear after the "=" sign.</li>
+          <li>Tap "Reset" to clear both slots and start again.</li>
+        </ol>
+      </div>
+    </div>
+  </section>
 </div>
 
 <script>
